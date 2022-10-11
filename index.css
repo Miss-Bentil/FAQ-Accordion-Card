@@ -141,9 +141,14 @@ body {
         background-repeat: no-repeat;
         background-position: 50% -5%;
         
-        
-        
     }
+
+    .question-and-answers{
+        padding: 1rem 0 1rem 0;
+    }
+
+
+
 
     .woman-img {
       display: none;
