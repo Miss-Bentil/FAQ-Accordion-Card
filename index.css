@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+    --softRed: hsl(14, 88%, 65%);
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+    --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+    --darkGrayishBlue: hsl(240, 6%, 50%);
+    --lightGrayishBlue: hsl(240, 5%, 91%);
+    --fontSize: 12px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kumbh",sans-serif;
+    font-size: var(--fontSize);
+    background: linear-gradient(hsl(273,75%,66%), hsl(240,73%,65%));
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    width: 900px;
+    height: 550px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-gap: 3rem;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 850% 69%;
+}
+
+.answer {
+    display: none;
+}
+
+.accordion {
+    padding: 2rem 3rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+.question-and-answers {
+    padding: 2rem 0 1rem 0;
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    color:var(--darkGrayishBlue);
+    font-size: 16px;
+
+}
+
+.question:hover {
+    color: var(--softRed)
+}
+
+
+
+.question img {
+    align-self: center;
+}
+
+.active .question img {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in;
+}
+
+.active > .answer {
+    display: block;
+    padding: 1rem 0 0.5rem 0; 
+    color: var(--darkGrayishBlue);
+    font-size: 14px;
+}
+
+.active h3 {
+    font-weight: 700;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+.wrapper {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    top: 40%;
+    right: 75%;
+}
+
+.woman-img {
+    background-image: url(/images/illustration-woman-online-desktop.svg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 100% 40%;
+}
+
+
+@media (max-width: 899px) {
+    .container {
+        width: 95%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr;
+        grid-gap: 0.5rem;
+        position:relative;
+        height: 650px;
+        margin-top: 7rem;
+        
+    }
+
+  
+
+    .wrapper {
+        background-image: url(/images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: 50% -5%;
+        
+        
+        
+    }
+
+    .woman-img {
+      display: none;
+    
+    }
+
+    .box {
+        display: none;
+    }
+
+    .image {
+        background-image: url(/images/illustration-woman-online-mobile.svg);
+        height: 120%;
+        background-repeat: no-repeat;
+        background-position: 50% ;
+        position: relative;
+        top: -70%;
+        
+
+    }
+
+    .accordion {
+        padding-top: 0;
+    }
+    
+    .title {
+        text-align: center;
+    }
+}
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .attribution a {
+    color: #fff;
+  }
