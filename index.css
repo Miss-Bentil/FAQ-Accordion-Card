@@ -122,8 +122,8 @@ body {
         grid-template-rows: 150px 1fr;
         grid-gap: 0.5rem;
         position:relative;
-        height: 650px;
-        margin-top: 7rem;
+        height: 580px;
+        margin-top: 4rem;
         
     }
 
@@ -171,11 +171,12 @@ body {
     }
 
     .accordion {
-        padding-top: 0;
+        padding: 0 1rem 2rem 1rem;
     }
     
     .title {
         text-align: center;
+        padding-bottom: 1rem;
     }
 }
 
@@ -185,7 +186,7 @@ body {
 .attribution {
     font-size: 11px;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .attribution a {
