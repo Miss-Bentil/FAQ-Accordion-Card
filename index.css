@@ -129,7 +129,7 @@ body {
     padding: 0.5rem 0 0.2rem 0; 
     color: var(--darkGrayishBlue);
     font-size: 14px;
-    animation: slide-down .3s ease-in;
+    animation: slide-down .2s ease-in;
 
 
 }
