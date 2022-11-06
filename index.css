@@ -40,9 +40,9 @@ body {
     background-position: 850% 69%;
 }
 
-.answer {
-    display: none;
-}
+
+/****************CONTENT**********************/
+
 
 .accordion {
     padding: 2rem 3rem 2rem 2rem;
@@ -71,7 +71,34 @@ body {
 }
 
 .question:hover {
-    color: var(--softRed)
+    color: var(--softRed);
+    animation: shake .8s ease-in ;
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+    20%,
+    40%,
+    60%,
+    80%{
+        transform: translate(.3em);
+
+    }
+
+    10%,
+    30%,
+    50%{
+        transform: translate(-.2em);
+    }
+    70%,
+    100%{
+        transform: translate(0);
+    }
+
+
 }
 
 
@@ -85,12 +112,65 @@ body {
     transition: all 0.3s ease-in;
 }
 
-.active > .answer {
+.sleep .question img {
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in;
+}
+
+.answer {
+    display: none;
+
+
+}
+
+
+.active .answer {
     display: block;
     padding: 0.5rem 0 0.2rem 0; 
     color: var(--darkGrayishBlue);
     font-size: 14px;
+    animation: slide-down .3s ease-in;
+
+
 }
+
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        line-height: 8px ;
+    }
+
+    to {
+        opacity: 1;
+        line-height: 15px;
+        
+    }
+    
+}
+
+  /* .sleep .answer {
+    display: none;
+    animation: slide-up 1s ease-in;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        line-height: 15px ;
+        display: none;
+        background-color: yellow;
+    }
+
+    to {
+        opacity: 1;
+        line-height: 8px;
+        
+
+    }
+    
+}    */
+
 
 .active h3 {
     font-weight: 700;
@@ -115,6 +195,12 @@ body {
 }
 
 
+
+
+
+
+
+
 @media (max-width: 899px) {
     .container {
         width: 85%;
@@ -134,7 +220,21 @@ body {
         justify-content: center;
     }
 
-  
+    .accordion {
+        padding: 0 1rem 2rem 1rem;
+    }
+    
+    .title {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+
+
+
+
+    /* The mobile image and the desktop woman images are different.That is why a 
+        different div .image was created */
 
     .wrapper {
         background-image: url(images/bg-pattern-mobile.svg);
@@ -150,8 +250,6 @@ body {
     .question h3 {
         font-size: 1rem;
     }
-
-
 
 
     .woman-img {
@@ -174,25 +272,8 @@ body {
 
     }
 
-    .accordion {
-        padding: 0 1rem 2rem 1rem;
-    }
     
-    .title {
-        text-align: center;
-        padding-bottom: 1rem;
-    }
 }
 
 
 
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  .attribution a {
-    color: #fff;
-  }
